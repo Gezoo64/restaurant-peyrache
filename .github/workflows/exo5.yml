@@ -10,7 +10,6 @@ jobs :
       matrix : 
         caisse : [18, 20, 22]
   steps : 
-
     - name : Récupérer le code 
       uses : actions/checkout@v4 
 

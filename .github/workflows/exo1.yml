@@ -1,0 +1,13 @@
+name : resto 
+
+on : 
+  push : 
+    branches : [main]
+
+jobs : 
+  exo : 
+    runs-on : ubuntu-lastest 
+
+    steps : 
+      scripts : | 
+        echo "Le restaurant est ouvert !";

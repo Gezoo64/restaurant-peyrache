@@ -9,29 +9,29 @@ jobs :
     strategy : 
       matrix : 
         caisse : [18, 20, 22]
-  steps : 
-    - name : Récupérer le code 
-      uses : actions/checkout@v4 
+    steps : 
+      - name : Récupérer le code 
+        uses : actions/checkout@v4 
 
-    - name : Installation Node 
-      uses : actions/setup-node@v4
-      with: 
-        node-version: '20'
+      - name : Installation Node 
+        uses : actions/setup-node@v4
+        with: 
+          node-version: '20'
 
-    - name : Initialisation 
-      run : npm init -y 
+      - name : Initialisation 
+        run : npm init -y 
 
-    - name : Installer les dépendances jest
-      run : npm install --save-dev jest
+      - name : Installer les dépendances jest
+        run : npm install --save-dev jest
 
-    - name : Installer les dépendances lint
-      run : npm install --save-dev eslint @eslint/js globals
+      - name : Installer les dépendances lint
+        run : npm install --save-dev eslint @eslint/js globals
 
-    - name : Utiliser Lint 
-      run : npm run lint
+      - name : Utiliser Lint 
+        run : npm run lint
 
-    - name : Lancer les tests 
-      run : npm test 
+      - name : Lancer les tests 
+        run : npm test 
 
-    - name : Show message 
-      run : echo "Caisse ${{ matrix.caisse }}";
+      - name : Show message 
+        run : echo "Caisse ${{ matrix.caisse }}";

@@ -1,5 +1,5 @@
 function calculerAddition(prixPlat, prixBoisson){
-    return prixPlat + prixBoisson + 18;
+    return prixPlat + prixBoisson;
 }
 
 module.exports = {calculerAddition};

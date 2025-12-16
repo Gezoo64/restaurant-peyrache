@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "addiction.test.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "jest"
   },

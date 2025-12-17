@@ -64,10 +64,19 @@ jobs:
     steps : 
     - name : url 
       run : | 
-        echo "URL : ${{ steps.deployment.outputs.page_url }}";
+        echo "URL : https://${{ secrets.USERNAME }}.github.io/${{ secrets.REPO_NAME }}";
     - name : date  
       run : | 
-        echo "Date : ${{ steps.date.outputs.date }}";
+        echo "Date : ${{ github.date }}";
     - name : author 
       run : | 
-        echo "Author : ${{ github.event.pull_request.user.login }}";
+        echo "Author : ${{ github.event.push.user.login }}";
+    - name : num  
+      run : | 
+        echo "Commit number : ${{ github.event.push.login }}";
+    - name : msg 
+      run : | 
+        echo "Message : ${{ github.event.head_commit.message }}";
+    - name : branch 
+      run : | 
+        echo "Branch : ${{ github.head_ref  }}";

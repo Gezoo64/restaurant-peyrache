@@ -55,5 +55,5 @@ jobs:
         run: sleep 30
       - name: Vérifier que le restaurant est ouvert
         run: |
-          curl --fail https://${{ services.USERNAME }}.github.io/${{ services.REPO_NAME }} || exit 1
+          curl --fail https://${{ secrets.USERNAME }}.github.io/${{ secrets.REPO_NAME }} || exit 1
           echo "Le restaurant est ouvert !"

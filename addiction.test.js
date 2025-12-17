@@ -4,5 +4,5 @@ test("Test calculerAddition(15, 5) => 20", ()=>{
     expect(calculerAddition(15, 5)).toBe(20)
 });
 test("Test appliquerReduction(100, 10) => 90", ()=>{
-    expect(appliquerReduction(100, 10)).toBe(90)
+    expect(appliquerReduction(100, 10)).toBe(910)
 });

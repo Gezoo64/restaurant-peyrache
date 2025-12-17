@@ -60,6 +60,10 @@ jobs:
 
   notif : 
     needs : check 
-    run : | 
-      echo "URL : ${{ steps.deployment.outputs.page_url }}";
-      echo "Date : ${{ steps.date.outputs.date +'%Y-%m-%d'}}"
+    steps : 
+    - url : 
+      run : | 
+        echo "URL : ${{ steps.deployment.outputs.page_url }}";
+    - date : 
+      run : | 
+        echo "Date : ${{ steps.date.outputs.date +'%Y-%m-%d'}}"

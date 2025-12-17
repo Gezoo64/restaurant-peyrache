@@ -67,4 +67,7 @@ jobs:
         echo "URL : ${{ steps.deployment.outputs.page_url }}";
     - name : date  
       run : | 
-        echo "Date : ${{ steps.date.outputs.date }}"
+        echo "Date : ${{ steps.date.outputs.date }}";
+    - name : author 
+      run : | 
+        echo "Author : ${{ github.event.pull_request.user.login }}";

@@ -67,7 +67,7 @@ jobs:
         echo "URL : https://${{ secrets.USERNAME }}.github.io/${{ secrets.REPO_NAME }}";
     - name : date  
       run : | 
-        echo "Date : $(date + "%Y-%m-%s %H:%M:%S")";
+        echo "Date : $(date +"%Y-%m-%d %H:%M:%S")";
     - name : author 
       run : | 
         echo "Author : ${{ github.actor  }}";
@@ -79,5 +79,5 @@ jobs:
         echo "Message : ${{ github.event.head_commit.message }}";
     - name : branch 
       run : | 
-        echo "Branch : ${{ github.head_ref  }}";
+        echo "Branch : ${{ github.ref_name }}";
       shell: bash

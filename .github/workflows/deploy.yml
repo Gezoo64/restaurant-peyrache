@@ -60,6 +60,7 @@ jobs:
 
   notif : 
     needs : check 
+    runs-on : ubuntu-latest 
     steps : 
     - name : url 
       run : | 

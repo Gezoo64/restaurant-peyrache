@@ -70,7 +70,7 @@ jobs:
         echo "Date : ${{ github.date }}";
     - name : author 
       run : | 
-        echo "Author : ${{ github.event.push.user.login }}";
+        echo "Author : ${{ github.actor  }}";
     - name : num  
       run : | 
         echo "Commit number : ${{ github.event.push.login }}";
@@ -80,3 +80,4 @@ jobs:
     - name : branch 
       run : | 
         echo "Branch : ${{ github.head_ref  }}";
+      shell: bash

@@ -52,8 +52,14 @@ jobs:
     needs : deploy
     steps : 
       - name: Attendre que le site soit prêt
-        run: sleep 30
+        run: sleep 3
       - name: Vérifier que le restaurant est ouvert
         run: |
           curl --fail https://${{ secrets.USERNAME }}.github.io/${{ secrets.REPO_NAME }} || exit 1
           echo "Le restaurant est ouvert !"
+
+  notif : 
+    needs : check 
+    run : | 
+      echo "URL : ${{ steps.deployment.outputs.page_url }}";
+      echo "Date : ${{ steps.date.outputs.date +'%Y-%m-%d'}}"

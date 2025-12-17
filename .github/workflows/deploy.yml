@@ -67,7 +67,7 @@ jobs:
         echo "URL : https://${{ secrets.USERNAME }}.github.io/${{ secrets.REPO_NAME }}";
     - name : date  
       run : | 
-        echo "Date : ${date}";
+        echo "Date : $(date + %Y:%m:%s)";
     - name : author 
       run : | 
         echo "Author : ${{ github.actor  }}";

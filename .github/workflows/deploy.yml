@@ -61,9 +61,9 @@ jobs:
   notif : 
     needs : check 
     steps : 
-    - url : 
+    - name : url 
       run : | 
         echo "URL : ${{ steps.deployment.outputs.page_url }}";
-    - date : 
+    - name : date  
       run : | 
         echo "Date : ${{ steps.date.outputs.date +'%Y-%m-%d'}}"
